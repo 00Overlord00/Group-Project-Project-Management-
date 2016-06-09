@@ -2,10 +2,6 @@ console.log( 'Script: GO' );
 
 $(document).ready( function() {
 
-var makeMyDay = function() {
-  $( '#projectArea' ).append( '' );
-};
-
 var wildCard = function(){
   return parseInt(mysteryNumber(10, 60));
 };
@@ -27,7 +23,7 @@ $(document).on( 'click', '#generateProject', function(){
 var bigBusiness = function() {
   var businessName;
   var rando = wildCard();
-  if ( rando >25) {
+  if ( rando > 25) {
     businessName = "CrapCo.";
   }else {
     businessName = "HyperKids INC.";
