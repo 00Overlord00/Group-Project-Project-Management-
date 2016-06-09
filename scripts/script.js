@@ -15,9 +15,18 @@ $(document).on( 'click', '#generateProject', function(){
   $( '#projectArea' ).empty();
   $( '#empGenDiv' ).empty();
   $( '#empGenDiv' ).append( '<button id = "empGen">Generate Employee</button>' );
-  // $( '#projectArea' ).append('<p>' + genCo() + '</p>');
   var company = genCo();
   $('#projectArea').append('<p>Project: ' + company.name + ' Logic: ' + company.logic + ' Front End: ' + company.frontEnd + ' Back End: ' + company.backEnd + '</p>');
+});
+
+$(document).on( 'click', '#empGen', function(){
+  $.ajax({
+    url: 'http://localhost:8080/randomEmp',
+    dataType: 'json',
+    success: function(data){
+    console.log(data.empName);  
+    }
+  });
 });
 
 var bigBusiness = function() {
