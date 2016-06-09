@@ -9,8 +9,8 @@ var wildCard = function(min, max) {
 };
 
 $(document).on( 'click', '#generateProject', function(){
+    $( '#projectArea' ).empty();
   $('body').append( '<div id = "projectArea"></div>' );
-  $('body').append( '<div id = "buttonArea"></div>' );
   $( '#empGenDiv' ).append( '<button id = "empGen">Generate Employee</button>' );
   console.log( parseInt(wildCard(1,9)) );
 });
