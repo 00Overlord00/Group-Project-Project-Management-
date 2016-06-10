@@ -1,5 +1,7 @@
 console.log( 'Script: GO' );
 
+var employeePool = [];
+
 $(document).ready( function() {
 
 var wildCard = function(){
