@@ -24,7 +24,7 @@ $(document).on( 'click', '#empGen', function(){
     url: 'http://localhost:8080/randomEmp',
     dataType: 'json',
     success: function(data){
-      var empObject = JSON.stringify( data );
+      var empObject = JSON.parse(( data ));
     console.log(empObject.empName);
     }
   });
