@@ -11,10 +11,10 @@ var mysteryNumber = function(min, max) {
 };
 
 $(document).on( 'click', '#generateProject', function(){
-  $('body').append( '<div id = "projectArea"></div>' );
+  $('body').append( '<div id="projectArea"></div>' );
   $( '#projectArea' ).empty();
   $( '#empGenDiv' ).empty();
-  $( '#empGenDiv' ).append( '<button id = "empGen">Generate Employee</button>' );
+  $( '#empGenDiv' ).append( '<button id="empGen">Generate Employee</button>' );
   var company = genCo();
   $('#projectArea').append('<p>Project: ' + company.name + ' Logic: ' + company.logic + ' Front End: ' + company.frontEnd + ' Back End: ' + company.backEnd + '</p>');
 });
@@ -22,10 +22,10 @@ $(document).on( 'click', '#generateProject', function(){
 $(document).on( 'click', '#empGen', function(){
   $.ajax({
     url: 'http://localhost:8080/randomEmp',
-    dataType: 'json',
+    //dataType: 'json',
     success: function(data){
-      var empObject = JSON.stringify( data );
-    console.log(empObject.empName);
+      //var empObject = JSON.stringify( data );
+    console.log(data.empName);
     }
   });
 });

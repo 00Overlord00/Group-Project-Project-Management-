@@ -8,11 +8,11 @@ var server=app.listen( 8080, 'localhost', function(){
 });
 
 app.get('/', function(req, res){
-  res.sendFile(path.resolve("../views/index.html"));
+  res.sendFile(path.resolve("./views/index.html"));
 });
 
 app.get('/randomEmp', function(req, res){
-  var newEmp=JSON.parse(empGet());
+  var newEmp=empGet();
   //console.log(newEmp);
   res.send(newEmp);
 });
