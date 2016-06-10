@@ -3,9 +3,9 @@
 2 info using npm@2.15.5
 3 info using node@v4.4.5
 4 verbose stack Error: Failed to parse json
-4 verbose stack Unexpected end of input at 15:2
-4 verbose stack
-4 verbose stack ^
+4 verbose stack Trailing comma in object at 14:3
+4 verbose stack   }
+4 verbose stack   ^
 4 verbose stack     at parseError (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:390:11)
 4 verbose stack     at parseJson (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:79:23)
 4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
@@ -19,9 +19,9 @@
 10 error file /Users/edwardkaranikolas/Desktop/GroupProjectManagement/package.json
 11 error code EJSONPARSE
 12 error Failed to parse json
-12 error Unexpected end of input at 15:2
-12 error
-12 error ^
+12 error Trailing comma in object at 14:3
+12 error   }
+12 error   ^
 13 error File: /Users/edwardkaranikolas/Desktop/GroupProjectManagement/package.json
 14 error Failed to parse package.json data.
 14 error package.json must be actual JSON, not just JavaScript.
