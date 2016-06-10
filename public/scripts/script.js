@@ -1,7 +1,5 @@
 console.log( 'Script: GO' );
 
-var employeePool = [];
-
 $(document).ready( function() {
 
 var wildCard = function(){
@@ -22,7 +20,9 @@ $(document).on( 'click', '#generateProject', function(){
 });
 
 $(document).on( 'click', '#empGen', function(){
-  hiringManager();
+  var employeePool = [];
+  employeePool.push(hiringManager());
+  console.log(employeePool);
 });
 
 var bigBusiness = function() {
@@ -69,7 +69,7 @@ var hiringManager = function() {
     dataType: 'json',
     success: function(data){
       var empObject = JSON.parse(( data ));
-    console.log(empObject.empName);
+    return empObject;
     }
   });
 };
