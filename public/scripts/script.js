@@ -20,14 +20,7 @@ $(document).on( 'click', '#generateProject', function(){
 });
 
 $(document).on( 'click', '#empGen', function(){
-  $.ajax({
-    url: 'http://localhost:8080/randomEmp',
-    dataType: 'json',
-    success: function(data){
-      var empObject = JSON.parse(( data ));
-    console.log(empObject.empName);
-    }
-  });
+  hiringManager();
 });
 
 var bigBusiness = function() {
@@ -67,4 +60,16 @@ var genCo = function() {
     console.log( company );
     return company;
   };
+
+var hiringManager = function() {
+  $.ajax({
+    url: 'http://localhost:8080/randomEmp',
+    dataType: 'json',
+    success: function(data){
+      var empObject = JSON.parse(( data ));
+    console.log(empObject.empName);
+    }
+  });
+};
+
 });
