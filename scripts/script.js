@@ -16,7 +16,7 @@ $(document).on( 'click', '#generateProject', function(){
   $( '#empGenDiv' ).empty();
   $( '#empGenDiv' ).append( '<button id = "empGen">Generate Employee</button>' );
   var company = genCo();
-  $('#projectArea').append('<p>Project: ' + company.name + ' Logic: ' + company.logic + ' Front End: ' + company.frontEnd + ' Back End: ' + company.backEnd + '</p>');
+  $('#projectArea').append('<h2>Project: ' + company.name + '</h2><br>' + '<h3>Logic: ' + company.logic + '<br>' + 'Front End: ' + company.frontEnd + '<br>' + 'Back End: ' + company.backEnd + '</h3>');
 });
 
 $(document).on( 'click', '#empGen', function(){
@@ -33,10 +33,28 @@ $(document).on( 'click', '#empGen', function(){
 var bigBusiness = function() {
   var businessName;
   var rando = wildCard();
-  if ( rando > 25) {
+  if ( rando < 15) {
     businessName = "CrapCo.";
+  }else if (rando > 15 && rando < 20){
+    businessName = "Complete BS LLC";
+  }else if(rando > 20 && rando < 25){
+    businessName = "OmniCorp";
+  }else if(rando > 25 && rando < 30){
+    businessName = "Callahan Auto";
+  }else if( rando > 30 && rando < 35){
+    businessName = "Spaceley Sprockets";
+  }else if( rando > 35 && rando < 40){
+    businessName = "Empire Records";
+  }else if( rando > 40 && rando < 45){
+    businessName = "Pewterschmidt Industries";
+  }else if( rando > 45 && rando < 50){
+    businessName = "Virtucon";
+  }else if( rando > 50 && rando < 55){
+    businessName = "Dunder Mifflin Paper Co.";
+  }else if( rando > 55 && rando <= 60){
+    businessName = "Stark Industries";
   }else {
-    businessName = "HyperKids INC.";
+    businessName = "Nakatomi Corporation";
   } return businessName;
 };
 
